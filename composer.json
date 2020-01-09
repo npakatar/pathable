@@ -1,0 +1,54 @@
+{
+    "name": "npakatar/pathable",
+    "description": "Trait to generate default resourceful paths for Laravel models",
+    "keywords": [
+        "npakatar",
+        "pathable"
+    ],
+    "homepage": "https://github.com/npakatar/pathable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nick Pakatar",
+            "email": "nick@nickpakatar.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Npakatar\\Pathable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Npakatar\\Pathable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Npakatar\\Pathable\\PathableServiceProvider"
+            ],
+            "aliases": {
+                "Pathable": "Npakatar\\Pathable\\PathableFacade"
+            }
+        }
+    }
+}
